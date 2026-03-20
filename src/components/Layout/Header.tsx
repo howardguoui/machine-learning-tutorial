@@ -34,6 +34,15 @@ export function Header({ onMenuToggle }: Props) {
 
       <div className="flex-1" />
 
+      {/* Live Demo link */}
+      <Link
+        to="/demo"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-900/30 hover:bg-violet-100 dark:hover:bg-violet-900/50 transition-colors text-sm font-medium text-violet-700 dark:text-violet-400 no-underline"
+      >
+        <span>🤖</span>
+        <span className="hidden sm:block">{t('Live Demo', '实时演示')}</span>
+      </Link>
+
       {/* Playground link */}
       <Link
         to="/playground"

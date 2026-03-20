@@ -5,6 +5,7 @@ import { AppLayout } from './components/Layout/AppLayout'
 import { HomePage } from './pages/HomePage'
 import { TopicPage } from './pages/TopicPage'
 import { PythonPlaygroundPage } from './pages/PythonPlaygroundPage'
+import { LiveDemoPage } from './pages/LiveDemoPage'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/learn/:topicId" element={<TopicPage />} />
               <Route path="/playground" element={<PythonPlaygroundPage />} />
+              <Route path="/demo" element={<LiveDemoPage />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Route>
           </Routes>
