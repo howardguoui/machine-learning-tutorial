@@ -9,9 +9,17 @@ import { metrics, biasVariance } from './topics/evaluation'
 import { mlPipelines, hyperparamTuning } from './topics/production'
 import { mlToLLM } from './topics/llm-bridge'
 import { lcelBasics, promptTemplates, simpleRAG } from './topics/phase1-lcel'
+import { ragRetriever } from './topics/phase1-extended'
 import { reactAgent, persistentMemory, toolRegistry } from './topics/phase2-agents'
+import { agentExecutor, mcpFilesystem, mcpSqlite } from './topics/phase2-mcp'
 import { hybridRAG, langGraphMultiAgent } from './topics/phase3-enterprise'
+import { bm25Retriever, ensembleRetriever, rerankerDetails } from './topics/phase3-retrievers'
+import { researcherNode, supervisorNode, writerNode, runGraph } from './topics/phase3-nodes'
+import { githubMCP, slackMCP } from './topics/phase3-enterprise-mcp'
 import { fastAPIProduction, selfHealingChains } from './topics/phase4-production'
+import { ragEvaluation, codeSelfHeal } from './topics/phase4-evaluation'
+import { sharedConfig, llmFactory, vectorStore } from './topics/shared-utilities'
+import { gradioDemo } from './topics/demo-app'
 
 export const curriculum: Chapter[] = [
   {
@@ -66,25 +74,43 @@ export const curriculum: Chapter[] = [
     id: 'phase1-lcel',
     title: { en: 'Phase 1: LCEL & RAG Foundations', zh: '阶段1：LCEL与RAG基础' },
     icon: '🔗',
-    topics: [lcelBasics, promptTemplates, simpleRAG],
+    topics: [lcelBasics, promptTemplates, simpleRAG, ragRetriever],
   },
   {
     id: 'phase2-agents',
     title: { en: 'Phase 2: Agents & Memory', zh: '阶段2：代理与记忆' },
     icon: '🤖',
-    topics: [reactAgent, persistentMemory, toolRegistry],
+    topics: [reactAgent, persistentMemory, toolRegistry, agentExecutor, mcpFilesystem, mcpSqlite],
   },
   {
     id: 'phase3-enterprise',
     title: { en: 'Phase 3: Enterprise RAG & LangGraph', zh: '阶段3：企业RAG与LangGraph' },
     icon: '🏢',
-    topics: [hybridRAG, langGraphMultiAgent],
+    topics: [hybridRAG, langGraphMultiAgent, bm25Retriever, ensembleRetriever, rerankerDetails, researcherNode, supervisorNode, writerNode, runGraph],
+  },
+  {
+    id: 'phase3-enterprise-mcp',
+    title: { en: 'Phase 3: Enterprise MCP Integrations', zh: '阶段3：企业MCP集成' },
+    icon: '🔌',
+    topics: [githubMCP, slackMCP],
   },
   {
     id: 'phase4-production',
     title: { en: 'Phase 4: Production & Self-Healing', zh: '阶段4：生产部署与自愈' },
     icon: '⚙️',
-    topics: [fastAPIProduction, selfHealingChains],
+    topics: [fastAPIProduction, selfHealingChains, ragEvaluation, codeSelfHeal],
+  },
+  {
+    id: 'shared-utilities',
+    title: { en: 'Shared Utilities & Config', zh: '共享工具与配置' },
+    icon: '🔧',
+    topics: [sharedConfig, llmFactory, vectorStore],
+  },
+  {
+    id: 'demo-app',
+    title: { en: 'Interactive Demo App', zh: '交互式演示应用' },
+    icon: '🎮',
+    topics: [gradioDemo],
   },
 ]
 
