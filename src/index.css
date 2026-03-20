@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+
+/* Markdown content styles */
+.markdown-content h1 { font-size: 1.75rem; font-weight: 700; margin: 1.5rem 0 1rem; color: inherit; }
+.markdown-content h2 { font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: inherit; }
+.markdown-content h3 { font-size: 1.15rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: inherit; }
+.markdown-content p { margin: 0.75rem 0; line-height: 1.75; }
+.markdown-content ul, .markdown-content ol { padding-left: 1.5rem; margin: 0.75rem 0; }
+.markdown-content li { margin: 0.25rem 0; line-height: 1.7; }
+.markdown-content code { font-family: ui-monospace, Consolas, monospace; font-size: 0.875em; padding: 0.15em 0.4em; border-radius: 4px; background: #f1f5f9; }
+.dark .markdown-content code { background: #1e293b; }
+.markdown-content pre { background: #f1f5f9; border-radius: 8px; padding: 1rem; overflow-x: auto; margin: 1rem 0; }
+.dark .markdown-content pre { background: #0f172a; }
+.markdown-content pre code { background: transparent; padding: 0; font-size: 0.875rem; }
+.markdown-content blockquote { border-left: 3px solid #10b981; padding-left: 1rem; margin: 1rem 0; color: #64748b; }
+.dark .markdown-content blockquote { color: #94a3b8; }
+.markdown-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.markdown-content th, .markdown-content td { border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; text-align: left; }
+.dark .markdown-content th, .dark .markdown-content td { border-color: #334155; }
+.markdown-content th { background: #f8fafc; font-weight: 600; }
+.dark .markdown-content th { background: #1e293b; }
+.markdown-content a { color: #10b981; text-decoration: underline; }
+.markdown-content hr { border: none; border-top: 1px solid #e2e8f0; margin: 1.5rem 0; }
+.dark .markdown-content hr { border-color: #334155; }
