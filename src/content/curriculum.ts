@@ -8,6 +8,10 @@ import { neuralNetworks, cnnRnn } from './topics/neural'
 import { metrics, biasVariance } from './topics/evaluation'
 import { mlPipelines, hyperparamTuning } from './topics/production'
 import { mlToLLM } from './topics/llm-bridge'
+import { lcelBasics, promptTemplates, simpleRAG } from './topics/phase1-lcel'
+import { reactAgent, persistentMemory, toolRegistry } from './topics/phase2-agents'
+import { hybridRAG, langGraphMultiAgent } from './topics/phase3-enterprise'
+import { fastAPIProduction, selfHealingChains } from './topics/phase4-production'
 
 export const curriculum: Chapter[] = [
   {
@@ -57,6 +61,30 @@ export const curriculum: Chapter[] = [
     title: { en: 'ML → LLM Bridge', zh: 'ML到LLM的桥梁' },
     icon: '🌉',
     topics: [mlToLLM],
+  },
+  {
+    id: 'phase1-lcel',
+    title: { en: 'Phase 1: LCEL & RAG Foundations', zh: '阶段1：LCEL与RAG基础' },
+    icon: '🔗',
+    topics: [lcelBasics, promptTemplates, simpleRAG],
+  },
+  {
+    id: 'phase2-agents',
+    title: { en: 'Phase 2: Agents & Memory', zh: '阶段2：代理与记忆' },
+    icon: '🤖',
+    topics: [reactAgent, persistentMemory, toolRegistry],
+  },
+  {
+    id: 'phase3-enterprise',
+    title: { en: 'Phase 3: Enterprise RAG & LangGraph', zh: '阶段3：企业RAG与LangGraph' },
+    icon: '🏢',
+    topics: [hybridRAG, langGraphMultiAgent],
+  },
+  {
+    id: 'phase4-production',
+    title: { en: 'Phase 4: Production & Self-Healing', zh: '阶段4：生产部署与自愈' },
+    icon: '⚙️',
+    topics: [fastAPIProduction, selfHealingChains],
   },
 ]
 
