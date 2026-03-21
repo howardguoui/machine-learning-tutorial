@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const mlPipelines: TopicContent = {
   id: 'ml-pipelines',
-  emoji: '🏭',
   title: { en: 'Production ML Pipelines', zh: '生产ML流水线' },
   contentType: 'code',
   content: {
@@ -259,7 +258,6 @@ joblib.dump(best_model, 'credit_model.pkl')
 
 export const hyperparamTuning: TopicContent = {
   id: 'hyperparameter-tuning',
-  emoji: '🔧',
   title: { en: 'Hyperparameter Tuning', zh: '超参数调优' },
   contentType: 'code',
   content: {

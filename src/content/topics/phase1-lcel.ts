@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const lcelBasics: TopicContent = {
   id: 'lcel-basics',
-  emoji: '🔗',
   title: { en: 'LCEL — LangChain Expression Language', zh: 'LCEL — LangChain表达式语言' },
   contentType: 'code',
   content: {
@@ -199,7 +198,6 @@ return RunnableParallel(
 
 export const promptTemplates: TopicContent = {
   id: 'prompt-templates',
-  emoji: '📝',
   title: { en: 'Prompt Templates & Few-Shot', zh: '提示模板与少样本提示' },
   contentType: 'code',
   content: {
@@ -378,7 +376,6 @@ few_shot_prompt = FewShotChatMessagePromptTemplate(
 
 export const simpleRAG: TopicContent = {
   id: 'simple-rag',
-  emoji: '📚',
   title: { en: 'Simple RAG — Retrieval-Augmented Generation', zh: '简单RAG — 检索增强生成' },
   contentType: 'code',
   content: {

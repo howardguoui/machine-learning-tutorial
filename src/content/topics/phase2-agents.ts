@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const reactAgent: TopicContent = {
   id: 'react-agent',
-  emoji: '🤖',
   title: { en: 'ReAct Agent with Tools', zh: 'ReAct 代理与工具集' },
   contentType: 'code',
   content: {
@@ -240,7 +239,6 @@ async def load_mcp_tools_and_run(query: str) -> None:
 
 export const persistentMemory: TopicContent = {
   id: 'persistent-memory',
-  emoji: '🧠',
   title: { en: 'Persistent Conversation Memory', zh: '持久对话记忆' },
   contentType: 'code',
   content: {
@@ -435,7 +433,6 @@ LLM → "你叫 Alice。"
 
 export const toolRegistry: TopicContent = {
   id: 'tool-registry',
-  emoji: '🧰',
   title: { en: 'Tool Registry Pattern', zh: '工具注册表模式' },
   contentType: 'code',
   content: {

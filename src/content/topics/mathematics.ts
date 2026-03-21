@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const linearAlgebra: TopicContent = {
   id: 'linear-algebra',
-  emoji: '📐',
   title: { en: 'Linear Algebra for ML', zh: '机器学习中的线性代数' },
   contentType: 'code',
   content: {
@@ -171,7 +170,6 @@ print(f"解释方差: {pca.explained_variance_ratio_.cumsum()[-1]:.1%}")
 
 export const calcGradients: TopicContent = {
   id: 'calculus-gradients',
-  emoji: '📉',
   title: { en: 'Calculus & Gradients', zh: '微积分与梯度' },
   contentType: 'code',
   content: {
@@ -379,7 +377,6 @@ $$\\frac{\\partial L}{\\partial w} = \\frac{\\partial L}{\\partial a} \\cdot \\f
 
 export const optimization: TopicContent = {
   id: 'optimization',
-  emoji: '⚡',
   title: { en: 'Optimization Algorithms', zh: '优化算法' },
   contentType: 'code',
   content: {
@@ -572,7 +569,6 @@ Adam结合了动量（一阶矩）和RMSProp（二阶矩）：
 
 export const tensors: TopicContent = {
   id: 'tensors',
-  emoji: '🧊',
   title: { en: 'Tensors & NumPy/PyTorch', zh: '张量与NumPy/PyTorch' },
   contentType: 'code',
   content: {
@@ -746,7 +742,6 @@ print(f"归一化均值: {X_norm.mean():.6f}")    # ≈ 0
 
 export const probability: TopicContent = {
   id: 'probability-stats',
-  emoji: '🎲',
   title: { en: 'Probability & Statistics', zh: '概率与统计' },
   contentType: 'code',
   content: {

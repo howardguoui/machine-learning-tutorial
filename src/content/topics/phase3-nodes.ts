@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const researcherNode: TopicContent = {
   id: 'researcher-node',
-  emoji: '🔬',
   title: { en: 'Researcher Node Implementation', zh: '研究员节点实现' },
   contentType: 'code',
   content: {
@@ -142,7 +141,6 @@ def researcher_node(state: AgentState) -> AgentState:
 
 export const supervisorNode: TopicContent = {
   id: 'supervisor-node',
-  emoji: '🎯',
   title: { en: 'Supervisor Node: Task Routing', zh: '监督节点：任务路由' },
   contentType: 'code',
   content: {
@@ -280,7 +278,6 @@ def supervisor_node(state: AgentState) -> AgentState:
 
 export const writerNode: TopicContent = {
   id: 'writer-node',
-  emoji: '✍️',
   title: { en: 'Writer Node: Report Synthesis', zh: '写作节点：报告综合' },
   contentType: 'code',
   content: {
@@ -385,7 +382,6 @@ def writer_node(state: AgentState) -> AgentState:
 
 export const runGraph: TopicContent = {
   id: 'run-graph',
-  emoji: '▶️',
   title: { en: 'Running the Multi-Agent Graph', zh: '运行多智能体图' },
   contentType: 'code',
   content: {

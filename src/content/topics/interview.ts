@@ -6,7 +6,6 @@ import type { TopicContent } from '../types'
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewFeatureEngineering: TopicContent = {
   id: 'interview-feature-engineering',
-  emoji: '⚗️',
   title: { en: 'Interview: Feature Engineering', zh: '面试：特征工程' },
   contentType: 'article',
   content: {
@@ -280,7 +279,6 @@ X_test_scaled  = scaler.transform(X_test)  # 只用训练集的统计量！
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewModelEvaluation: TopicContent = {
   id: 'interview-model-evaluation',
-  emoji: '📏',
   title: { en: 'Interview: Model Evaluation', zh: '面试：模型评估' },
   contentType: 'article',
   content: {
@@ -537,7 +535,6 @@ $$\\text{Expected Error} = \\text{Bias}^2 + \\text{Variance} + \\text{Irreducibl
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewClassicalAlgorithms: TopicContent = {
   id: 'interview-classical-algorithms',
-  emoji: '🌳',
   title: { en: 'Interview: Classical Algorithms', zh: '面试：经典算法' },
   contentType: 'article',
   content: {
@@ -737,7 +734,6 @@ P(y=1|x) = 1 / (1 + e^{-w^T x - b})
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewOptimization: TopicContent = {
   id: 'interview-optimization',
-  emoji: '⚡',
   title: { en: 'Interview: Optimization & Regularization', zh: '面试：优化与正则化' },
   contentType: 'article',
   content: {
@@ -934,7 +930,6 @@ elastic = ElasticNet(alpha=0.1, l1_ratio=0.5)  # L1 + L2
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewNeuralNetworks: TopicContent = {
   id: 'interview-neural-networks',
-  emoji: '🧠',
   title: { en: 'Interview: Neural Networks & Deep Learning', zh: '面试：神经网络与深度学习' },
   contentType: 'article',
   content: {
@@ -1139,7 +1134,6 @@ Attention(Q, K, V) = softmax(QKᵀ/√dₖ) · V
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewUnsupervised: TopicContent = {
   id: 'interview-unsupervised',
-  emoji: '🔍',
   title: { en: 'Interview: Unsupervised & Probabilistic Models', zh: '面试：非监督学习与概率模型' },
   contentType: 'article',
   content: {
@@ -1368,7 +1362,6 @@ p(x) = Σₖ πₖ N(x; μₖ, Σₖ)
 // ─────────────────────────────────────────────────────────────────────────────
 export const interviewEnsembleAdvanced: TopicContent = {
   id: 'interview-ensemble-advanced',
-  emoji: '🌲',
   title: { en: 'Interview: Ensemble Methods & Advanced Topics', zh: '面试：集成学习与进阶主题' },
   contentType: 'article',
   content: {

@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const mlToLLM: TopicContent = {
   id: 'ml-to-llm',
-  emoji: '🌉',
   title: { en: 'From Classical ML to LLMs', zh: '从传统ML到大语言模型' },
   contentType: 'article',
   content: {

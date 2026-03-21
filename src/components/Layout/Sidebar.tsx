@@ -84,7 +84,6 @@ export function Sidebar({ isOpen }: Props) {
                             : 'text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 hover:text-gray-900 dark:hover:text-slate-200'
                         }`}
                       >
-                        <span className="text-base leading-none">{topic.emoji}</span>
                         <span className="flex-1 leading-snug text-xs">
                           {lang === 'zh' ? topic.title.zh : topic.title.en}
                         </span>

@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const sharedConfig: TopicContent = {
   id: 'shared-config',
-  emoji: '⚙️',
   title: { en: 'Centralised Settings (pydantic-settings)', zh: '集中配置（pydantic-settings）' },
   contentType: 'code',
   content: {
@@ -173,7 +172,6 @@ if not settings.openai_api_key:
 
 export const llmFactory: TopicContent = {
   id: 'llm-factory',
-  emoji: '🏭',
   title: { en: 'LLM Factory (Backend-Agnostic)', zh: 'LLM 工厂（后端无关）' },
   contentType: 'code',
   content: {
@@ -344,7 +342,6 @@ def get_llm(temperature=0.0, model=None) -> BaseChatModel:
 
 export const vectorStore: TopicContent = {
   id: 'vector-store',
-  emoji: '🗃️',
   title: { en: 'Vector Store Abstraction (Chroma/Qdrant)', zh: '向量存储抽象（Chroma/Qdrant）' },
   contentType: 'code',
   content: {

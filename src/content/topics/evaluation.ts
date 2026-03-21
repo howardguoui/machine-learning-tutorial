@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const metrics: TopicContent = {
   id: 'evaluation-metrics',
-  emoji: '📊',
   title: { en: 'Model Evaluation Metrics', zh: '模型评估指标' },
   contentType: 'code',
   content: {
@@ -157,7 +156,6 @@ print(f"ROC-AUC: {roc_auc_score(y_test, y_prob):.4f}")
 
 export const biasVariance: TopicContent = {
   id: 'bias-variance',
-  emoji: '⚖️',
   title: { en: 'Bias-Variance Tradeoff', zh: '偏差-方差权衡' },
   contentType: 'article',
   content: {

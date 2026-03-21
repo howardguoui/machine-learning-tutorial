@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const bm25Retriever: TopicContent = {
   id: 'bm25-retriever',
-  emoji: '🔤',
   title: { en: 'BM25 Keyword Retriever', zh: 'BM25 关键词检索器' },
   contentType: 'code',
   content: {
@@ -140,7 +139,6 @@ def load_docs_from_chroma(collection_name: str = "learn_llm") -> list[Document]:
 
 export const ensembleRetriever: TopicContent = {
   id: 'ensemble-retriever',
-  emoji: '🔀',
   title: { en: 'Ensemble Retriever (RRF)', zh: '集成检索器（RRF）' },
   contentType: 'code',
   content: {
@@ -264,7 +262,6 @@ def build_ensemble_retriever(
 
 export const rerankerDetails: TopicContent = {
   id: 'reranker-details',
-  emoji: '🏆',
   title: { en: 'Cross-Encoder Reranker', zh: '交叉编码器重排序器' },
   contentType: 'code',
   content: {

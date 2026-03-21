@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const gradioDemo: TopicContent = {
   id: 'gradio-demo',
-  emoji: '🎮',
   title: { en: 'Interactive Demo App (Gradio)', zh: '交互式演示应用（Gradio）' },
   contentType: 'code',
   content: {

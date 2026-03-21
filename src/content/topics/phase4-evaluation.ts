@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const ragEvaluation: TopicContent = {
   id: 'rag-evaluation',
-  emoji: '📏',
   title: { en: 'RAG Evaluation (LLM-as-Judge)', zh: 'RAG 评估（LLM 作为评判者）' },
   contentType: 'code',
   content: {
@@ -166,7 +165,6 @@ def evaluate_rag_response(question, context, answer) -> RAGEvalScore:
 
 export const codeSelfHeal: TopicContent = {
   id: 'code-self-heal',
-  emoji: '🩹',
   title: { en: 'Python Code Self-Healing', zh: 'Python 代码自愈' },
   contentType: 'code',
   content: {

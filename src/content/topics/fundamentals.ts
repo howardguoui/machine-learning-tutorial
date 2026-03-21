@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const whatIsML: TopicContent = {
   id: 'what-is-ml',
-  emoji: '🤖',
   title: { en: 'What is Machine Learning?', zh: '什么是机器学习' },
   contentType: 'article',
   content: {
@@ -134,7 +133,6 @@ print(model.predict([[28, 65]]))  # ['t-shirt']
 
 export const typesOfML: TopicContent = {
   id: 'types-of-ml',
-  emoji: '🗂️',
   title: { en: 'Types of Machine Learning', zh: '机器学习的类型' },
   contentType: 'article',
   content: {

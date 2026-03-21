@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const hybridRAG: TopicContent = {
   id: 'hybrid-rag',
-  emoji: '🔍',
   title: { en: 'Hybrid RAG with Reranking', zh: '混合 RAG 与重排序' },
   contentType: 'code',
   content: {
@@ -237,7 +236,6 @@ def rerank_documents(docs, query: str, top_n: int = 3):
 
 export const langGraphMultiAgent: TopicContent = {
   id: 'langgraph-multi-agent',
-  emoji: '🕸️',
   title: { en: 'LangGraph Multi-Agent System', zh: 'LangGraph 多智能体系统' },
   contentType: 'code',
   content: {

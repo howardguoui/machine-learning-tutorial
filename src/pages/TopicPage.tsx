@@ -55,7 +55,6 @@ export function TopicPage() {
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-4xl">{topic.emoji}</span>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
             {lang === 'zh' ? topic.title.zh : topic.title.en}
           </h1>
@@ -96,7 +95,7 @@ export function TopicPage() {
           >
             <div className="text-xs text-gray-400 dark:text-slate-500 mb-1">{t('← Previous', '← 上一篇')}</div>
             <div className="text-sm font-medium text-gray-700 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
-              {prevTopic.emoji} {lang === 'zh' ? prevTopic.title.zh : prevTopic.title.en}
+              {lang === 'zh' ? prevTopic.title.zh : prevTopic.title.en}
             </div>
           </Link>
         ) : <div className="flex-1" />}
@@ -108,7 +107,7 @@ export function TopicPage() {
           >
             <div className="text-xs text-gray-400 dark:text-slate-500 mb-1">{t('Next →', '下一篇 →')}</div>
             <div className="text-sm font-medium text-gray-700 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
-              {nextTopic.emoji} {lang === 'zh' ? nextTopic.title.zh : nextTopic.title.en}
+              {lang === 'zh' ? nextTopic.title.zh : nextTopic.title.en}
             </div>
           </Link>
         ) : <div className="flex-1" />}

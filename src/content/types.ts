@@ -1,6 +1,5 @@
 export interface TopicContent {
   id: string
-  emoji: string
   title: { en: string; zh: string }
   content: { en: string; zh: string }
   /** 'article' = text only | 'visual' = interactive diagram | 'code' = code-heavy | 'coming-soon' = placeholder */

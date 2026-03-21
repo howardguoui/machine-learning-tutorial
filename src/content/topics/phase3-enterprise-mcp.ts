@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const githubMCP: TopicContent = {
   id: 'github-mcp',
-  emoji: '🐙',
   title: { en: 'GitHub MCP Integration', zh: 'GitHub MCP 集成' },
   contentType: 'code',
   content: {
@@ -160,7 +159,6 @@ GITHUB_TOKEN=ghp_your_token_here   # 具有 'repo' 范围的经典令牌
 
 export const slackMCP: TopicContent = {
   id: 'slack-mcp',
-  emoji: '💬',
   title: { en: 'Slack MCP Integration', zh: 'Slack MCP 集成' },
   contentType: 'code',
   content: {

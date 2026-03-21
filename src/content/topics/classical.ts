@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const linearRegression: TopicContent = {
   id: 'linear-regression',
-  emoji: '📈',
   title: { en: 'Linear & Logistic Regression', zh: '线性回归与逻辑回归' },
   contentType: 'code',
   content: {
@@ -198,7 +197,6 @@ class LinearRegressionScratch:
 
 export const decisionTrees: TopicContent = {
   id: 'decision-trees',
-  emoji: '🌳',
   title: { en: 'Decision Trees & Ensembles', zh: '决策树与集成方法' },
   contentType: 'code',
   content: {
@@ -362,7 +360,6 @@ rf = RandomForestClassifier(
 
 export const svm: TopicContent = {
   id: 'svm-knn',
-  emoji: '📍',
   title: { en: 'SVM & k-NN', zh: '支持向量机与k近邻' },
   contentType: 'code',
   content: {

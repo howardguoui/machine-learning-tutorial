@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const neuralNetworks: TopicContent = {
   id: 'neural-networks',
-  emoji: '🧠',
   title: { en: 'Neural Networks', zh: '神经网络' },
   contentType: 'code',
   content: {
@@ -227,7 +226,6 @@ class MLPClassifier(nn.Module):
 
 export const cnnRnn: TopicContent = {
   id: 'cnn-rnn',
-  emoji: '🖼️',
   title: { en: 'CNNs & RNNs', zh: '卷积神经网络与循环神经网络' },
   contentType: 'code',
   content: {

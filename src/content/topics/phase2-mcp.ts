@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const agentExecutor: TopicContent = {
   id: 'agent-executor',
-  emoji: '⚙️',
   title: { en: 'Production Agent Executor', zh: '生产级代理执行器' },
   contentType: 'code',
   content: {
@@ -157,7 +156,6 @@ def run_agent(
 
 export const mcpFilesystem: TopicContent = {
   id: 'mcp-filesystem',
-  emoji: '📁',
   title: { en: 'MCP Filesystem Server', zh: 'MCP 文件系统服务器' },
   contentType: 'code',
   content: {
@@ -333,7 +331,6 @@ def write_file(filepath: str, content: str) -> str:
 
 export const mcpSqlite: TopicContent = {
   id: 'mcp-sqlite',
-  emoji: '🗄️',
   title: { en: 'MCP SQLite Server', zh: 'MCP SQLite 服务器' },
   contentType: 'code',
   content: {

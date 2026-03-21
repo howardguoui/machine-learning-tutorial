@@ -111,16 +111,6 @@ export function HomePage() {
                     {chapter.topics.length} {t('topics', '个主题')}
                     {ready > 0 && ` · ${ready} ${t('ready', '已完成')}`}
                   </p>
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {chapter.topics.slice(0, 5).map(topic => (
-                      <span key={topic.id} className="text-sm" title={lang === 'zh' ? topic.title.zh : topic.title.en}>
-                        {topic.emoji}
-                      </span>
-                    ))}
-                    {chapter.topics.length > 5 && (
-                      <span className="text-xs text-gray-400 self-center">+{chapter.topics.length - 5}</span>
-                    )}
-                  </div>
                 </div>
               </div>
             </Link>

@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const ragRetriever: TopicContent = {
   id: 'rag-retriever',
-  emoji: '🔎',
   title: { en: 'RAG Retriever & Document Formatting', zh: 'RAG 检索器与文档格式化' },
   contentType: 'code',
   content: {

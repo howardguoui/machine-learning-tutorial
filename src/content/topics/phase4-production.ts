@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const fastAPIProduction: TopicContent = {
   id: 'fastapi-production',
-  emoji: '🚀',
   title: { en: 'FastAPI Production API', zh: 'FastAPI 生产级 API' },
   contentType: 'code',
   content: {
@@ -270,7 +269,6 @@ async def evaluate(request: EvalRequest) -> EvalResponse:
 
 export const selfHealingChains: TopicContent = {
   id: 'self-healing-chains',
-  emoji: '🔧',
   title: { en: 'Self-Healing Chains', zh: '自愈链' },
   contentType: 'code',
   content: {

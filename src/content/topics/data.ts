@@ -2,7 +2,6 @@ import type { TopicContent } from '../types'
 
 export const dataPrep: TopicContent = {
   id: 'data-preparation',
-  emoji: '🧹',
   title: { en: 'Data Preparation & EDA', zh: '数据准备与探索性分析' },
   contentType: 'code',
   content: {
@@ -214,7 +213,6 @@ preprocessor = ColumnTransformer([
 
 export const featureEngineering: TopicContent = {
   id: 'feature-engineering',
-  emoji: '⚙️',
   title: { en: 'Feature Engineering', zh: '特征工程' },
   contentType: 'code',
   content: {
