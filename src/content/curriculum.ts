@@ -7,6 +7,12 @@ import { linearRegression, decisionTrees, svm } from './topics/classical'
 import { neuralNetworks, cnnRnn } from './topics/neural'
 import { metrics, biasVariance } from './topics/evaluation'
 import { mlPipelines, hyperparamTuning } from './topics/production'
+import {
+  interviewFeatureEngineering, interviewModelEvaluation,
+  interviewClassicalAlgorithms, interviewOptimization,
+  interviewNeuralNetworks, interviewUnsupervised,
+  interviewEnsembleAdvanced
+} from './topics/interview'
 import { mlToLLM } from './topics/llm-bridge'
 import { lcelBasics, promptTemplates, simpleRAG } from './topics/phase1-lcel'
 import { ragRetriever } from './topics/phase1-extended'
@@ -63,6 +69,17 @@ export const curriculum: Chapter[] = [
     title: { en: 'Production ML', zh: '生产ML' },
     icon: '🏭',
     topics: [mlPipelines, hyperparamTuning],
+  },
+  {
+    id: 'ml-interview',
+    title: { en: 'ML Interview Prep', zh: '机器学习面试准备' },
+    icon: '🎯',
+    topics: [
+      interviewFeatureEngineering, interviewModelEvaluation,
+      interviewClassicalAlgorithms, interviewOptimization,
+      interviewNeuralNetworks, interviewUnsupervised,
+      interviewEnsembleAdvanced,
+    ],
   },
   {
     id: 'llm-bridge',
