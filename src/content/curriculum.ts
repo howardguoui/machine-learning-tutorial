@@ -8,6 +8,11 @@ import { neuralNetworks, cnnRnn } from './topics/neural'
 import { metrics, biasVariance } from './topics/evaluation'
 import { mlPipelines, hyperparamTuning } from './topics/production'
 import {
+  interviewMathFoundations, interviewStatsProbability, interviewMLConcepts,
+  interviewDataHandling, interviewLinearModels,
+  interviewDecisionTrees, interviewModelValidation
+} from './topics/interview-basics'
+import {
   interviewFeatureEngineering, interviewModelEvaluation,
   interviewClassicalAlgorithms, interviewOptimization,
   interviewNeuralNetworks, interviewUnsupervised,
@@ -75,9 +80,21 @@ export const curriculum: Chapter[] = [
     title: { en: 'ML Interview Prep', zh: '机器学习面试准备' },
     icon: '🎯',
     topics: [
-      interviewFeatureEngineering, interviewModelEvaluation,
-      interviewClassicalAlgorithms, interviewOptimization,
-      interviewNeuralNetworks, interviewUnsupervised,
+      // Basics first — math → stats → ML concepts → data → algorithms → validation
+      interviewMathFoundations,
+      interviewStatsProbability,
+      interviewMLConcepts,
+      interviewDataHandling,
+      interviewLinearModels,
+      interviewDecisionTrees,
+      interviewModelValidation,
+      // Intermediate — from original PDF analysis
+      interviewFeatureEngineering,
+      interviewModelEvaluation,
+      interviewClassicalAlgorithms,
+      interviewOptimization,
+      interviewNeuralNetworks,
+      interviewUnsupervised,
       interviewEnsembleAdvanced,
     ],
   },
