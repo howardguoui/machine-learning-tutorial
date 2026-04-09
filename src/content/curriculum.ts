@@ -31,6 +31,14 @@ import { fastAPIProduction, selfHealingChains } from './topics/phase4-production
 import { ragEvaluation, codeSelfHeal } from './topics/phase4-evaluation'
 import { sharedConfig, llmFactory, vectorStore } from './topics/shared-utilities'
 import { gradioDemo } from './topics/demo-app'
+import {
+  llmInterviewArchitecture,
+  llmInterviewEdgeCases,
+  llmInterviewSystemDesign,
+  llmInterviewCodePatterns,
+} from './topics/llm-interview'
+import { transformerArchitecture, tokenizationPromptEng } from './topics/llm-transformer'
+import { peftDeepDive, scalingQuantization } from './topics/llm-advanced'
 
 export const curriculum: Chapter[] = [
   {
@@ -145,6 +153,29 @@ export const curriculum: Chapter[] = [
     title: { en: 'Interactive Demo App', zh: '交互式演示应用' },
     icon: '🎮',
     topics: [gradioDemo],
+  },
+  {
+    id: 'llm-foundations',
+    title: { en: 'LLM Foundations', zh: 'LLM基础知识' },
+    icon: '🔬',
+    topics: [transformerArchitecture, tokenizationPromptEng],
+  },
+  {
+    id: 'llm-optimization',
+    title: { en: 'LLM Optimization & Scaling', zh: 'LLM优化与规模化' },
+    icon: '⚡',
+    topics: [peftDeepDive, scalingQuantization],
+  },
+  {
+    id: 'llm-interview',
+    title: { en: 'LLM Interview Prep', zh: 'LLM面试准备' },
+    icon: '🧠',
+    topics: [
+      llmInterviewArchitecture,
+      llmInterviewEdgeCases,
+      llmInterviewSystemDesign,
+      llmInterviewCodePatterns,
+    ],
   },
 ]
 
