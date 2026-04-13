@@ -857,7 +857,7 @@ Result: only 1 GPU active at a time. Utilization = 1/num_stages.
 Split batch into micro-batches (e.g., batch=64 → 8 micro-batches of 8 samples each).
 
 **Timeline (2 stages, 4 micro-batches)**:
-```
+\`\`\`
 GPU-0       GPU-1
 F(mb0)  →   F(mb0)
 F(mb1)  →   F(mb1)   |   B(mb0) ← backward
@@ -867,7 +867,7 @@ F(mb3)  →   F(mb3)   |   B(mb2)
             B(mb1)   ←   B(mb3)
             B(mb2)   ←
             B(mb3)   ←
-```
+\`\`\`
 
 With optimal pipelining (1F1B schedule), both GPUs are busy ≈80% of the time.
 
