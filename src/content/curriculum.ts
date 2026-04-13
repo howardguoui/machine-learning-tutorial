@@ -40,6 +40,13 @@ import {
 import { transformerArchitecture, tokenizationPromptEng } from './topics/llm-transformer'
 import { peftDeepDive, scalingQuantization } from './topics/llm-advanced'
 
+// NOTE: The following imports are prepared but commented out until topic files are created by other agents:
+// import { corpusPreprocessing, bpeTokenizer, dataPipeline, ddpSetup, lossMonitoring, checkpointRecovery, speculativeDecoding } from './topics/pretraining'
+// import { dataVsModelParallelism, ddpHandsOn, fsdpStrategies, pipelineParallelism, debuggingDistributed } from './topics/distributed-training'
+// import { kvCache, torchCompile, flashAttention, quantizationInference, vllmPatterns, latencyProfiling } from './topics/inference-optimization'
+// import { whyAlignment, rewardModelTraining, ppoLoop, dpoDirect, rlaif, preferenceDatasets, alignmentEval } from './topics/alignment'
+// import { gpuMemoryHierarchy, torchCompileInternals, tritonKernelBasics, flashAttentionKernel, pytorchProfiler, costPerformance } from './topics/gpu-optimization'
+
 export const curriculum: Chapter[] = [
   {
     id: 'fundamentals',
@@ -177,6 +184,42 @@ export const curriculum: Chapter[] = [
       llmInterviewCodePatterns,
     ],
   },
+  // NOTE: The following chapters are prepared but will be added once their topic files are created by other agents:
+  // {
+  //   id: 'pretraining',
+  //   title: { en: 'Pretraining from Scratch', zh: '从零开始预训练' },
+  //   icon: '🏗️',
+  //   tier: 'senior',
+  //   topics: [corpusPreprocessing, bpeTokenizer, dataPipeline, ddpSetup, lossMonitoring, checkpointRecovery, speculativeDecoding],
+  // },
+  // {
+  //   id: 'distributed-training',
+  //   title: { en: 'Distributed Training: DDP & FSDP', zh: '分布式训练：DDP与FSDP' },
+  //   icon: '🖧',
+  //   tier: 'mid',
+  //   topics: [dataVsModelParallelism, ddpHandsOn, fsdpStrategies, pipelineParallelism, debuggingDistributed],
+  // },
+  // {
+  //   id: 'inference-optimization',
+  //   title: { en: 'Inference Optimization & Serving', zh: '推理优化与服务部署' },
+  //   icon: '⚡',
+  //   tier: 'mid',
+  //   topics: [kvCache, torchCompile, flashAttention, quantizationInference, vllmPatterns, latencyProfiling],
+  // },
+  // {
+  //   id: 'alignment',
+  //   title: { en: 'Alignment: RLHF, DPO & RLAIF', zh: '对齐：RLHF、DPO与RLAIF' },
+  //   icon: '🎯',
+  //   tier: 'senior',
+  //   topics: [whyAlignment, rewardModelTraining, ppoLoop, dpoDirect, rlaif, preferenceDatasets, alignmentEval],
+  // },
+  // {
+  //   id: 'gpu-optimization',
+  //   title: { en: 'GPU Optimization & CUDA Kernels', zh: 'GPU优化与CUDA核函数' },
+  //   icon: '🔥',
+  //   tier: 'senior',
+  //   topics: [gpuMemoryHierarchy, torchCompileInternals, tritonKernelBasics, flashAttentionKernel, pytorchProfiler, costPerformance],
+  // },
 ]
 
 export const totalTopics = curriculum.flatMap(c => c.topics).length

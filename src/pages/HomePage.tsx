@@ -1,12 +1,16 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { curriculum, totalTopics } from '../content/curriculum'
 import { useLang } from '../context/LangContext'
+import type { Tier } from '../content/types'
 
 export function HomePage() {
   const { t, lang } = useLang()
+  const [tierFilter, setTierFilter] = useState<'all' | Tier>('all')
 
   const firstTopic = curriculum[0]?.topics[0]
   const readyCount = curriculum.flatMap(c => c.topics).filter(t => t.contentType !== 'coming-soon').length
+  const filteredCurriculum = tierFilter === 'all' ? curriculum : curriculum.filter(c => (c.tier ?? 'junior') === tierFilter)
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
@@ -48,6 +52,32 @@ export function HomePage() {
         ))}
       </div>
 
+      {/* Tier Filter Badges */}
+      <div className="flex flex-wrap gap-2 justify-center mb-12">
+        {['all', 'junior', 'mid', 'senior'].map(tier => {
+          const tierLabels: Record<string, { en: string; zh: string }> = {
+            all: { en: 'All', zh: '全部' },
+            junior: { en: '🟢 Junior', zh: '🟢 初级' },
+            mid: { en: '🟡 Mid', zh: '🟡 中级' },
+            senior: { en: '🔴 Senior', zh: '🔴 高级' },
+          }
+          const label = tierLabels[tier]
+          return (
+            <button
+              key={tier}
+              onClick={() => setTierFilter(tier as 'all' | Tier)}
+              className={`px-4 py-2 rounded-full text-xs font-medium transition-colors ${
+                tierFilter === tier
+                  ? 'bg-emerald-600 text-white'
+                  : 'bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700'
+              }`}
+            >
+              {lang === 'zh' ? label.zh : label.en}
+            </button>
+          )
+        })}
+      </div>
+
       {/* CTA */}
       <div className="flex gap-3 justify-center mb-14 flex-wrap">
         {firstTopic && (
@@ -64,6 +94,12 @@ export function HomePage() {
         >
           {t('⚡ Python Playground', '⚡ Python 练习场')}
         </Link>
+        <Link
+          to="/resources"
+          className="px-6 py-3 bg-gray-200 dark:bg-slate-800 hover:bg-gray-300 dark:hover:bg-slate-700 text-gray-800 dark:text-slate-200 rounded-xl font-medium text-sm transition-colors no-underline"
+        >
+          {t('📚 Resources', '📚 资源')}
+        </Link>
       </div>
 
       {/* Learning Path */}
@@ -73,7 +109,7 @@ export function HomePage() {
           <span>{t('Learning Path', '学习路线')}</span>
         </h2>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 flex-wrap text-sm text-gray-600 dark:text-slate-400">
-          {curriculum.map((chapter, idx) => (
+          {filteredCurriculum.map((chapter, idx) => (
             <div key={chapter.id} className="flex items-center gap-2">
               <Link
                 to={`/learn/${chapter.topics[0].id}`}
@@ -82,7 +118,7 @@ export function HomePage() {
                 <span>{chapter.icon}</span>
                 <span className="text-xs">{lang === 'zh' ? chapter.title.zh : chapter.title.en}</span>
               </Link>
-              {idx < curriculum.length - 1 && (
+              {idx < filteredCurriculum.length - 1 && (
                 <span className="text-gray-300 dark:text-slate-700 hidden sm:block">→</span>
               )}
             </div>
@@ -92,7 +128,7 @@ export function HomePage() {
 
       {/* Chapter grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {curriculum.map(chapter => {
+        {filteredCurriculum.map(chapter => {
           const ready = chapter.topics.filter(t => t.contentType !== 'coming-soon').length
           const firstAvailable = chapter.topics.find(t => t.contentType !== 'coming-soon') ?? chapter.topics[0]
           return (
@@ -104,9 +140,20 @@ export function HomePage() {
               <div className="flex items-start gap-3">
                 <span className="text-3xl">{chapter.icon}</span>
                 <div className="flex-1 min-w-0">
-                  <h2 className="font-semibold text-gray-900 dark:text-white text-base group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                    {lang === 'zh' ? chapter.title.zh : chapter.title.en}
-                  </h2>
+                  <div className="flex items-start justify-between gap-2">
+                    <h2 className="font-semibold text-gray-900 dark:text-white text-base group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {lang === 'zh' ? chapter.title.zh : chapter.title.en}
+                    </h2>
+                    {chapter.tier && chapter.tier !== 'junior' && (
+                      <span className={`text-[10px] px-2 py-1 rounded font-medium shrink-0 ${
+                        chapter.tier === 'mid'
+                          ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                          : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
+                      }`}>
+                        {chapter.tier === 'mid' ? '🟡' : '🔴'} {chapter.tier === 'mid' ? t('Mid', '中级') : t('Senior', '高级')}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
                     {chapter.topics.length} {t('topics', '个主题')}
                     {ready > 0 && ` · ${ready} ${t('ready', '已完成')}`}

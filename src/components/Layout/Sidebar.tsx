@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
 import { curriculum } from '../../content/curriculum'
 import { useLang } from '../../context/LangContext'
 import { useState } from 'react'
@@ -15,6 +15,7 @@ interface Props { isOpen: boolean }
 export function Sidebar({ isOpen }: Props) {
   const { topicId } = useParams<{ topicId: string }>()
   const { lang } = useLang()
+  const location = useLocation()
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({})
   const [search, setSearch] = useState('')
 
@@ -102,11 +103,26 @@ export function Sidebar({ isOpen }: Props) {
         })}
       </nav>
 
-      {/* Footer */}
-      <div className="p-3 border-t border-gray-200 dark:border-slate-800 text-xs text-gray-400 dark:text-slate-600 text-center">
-        {curriculum.flatMap(c => c.topics).length} {lang === 'zh' ? '个主题' : 'topics'}
-        {' · '}
-        {lang === 'zh' ? '持续更新中' : 'continuously updated'}
+      {/* Footer - Resources Link */}
+      <div className="p-3 border-t border-gray-200 dark:border-slate-800 flex flex-col gap-3">
+        <Link
+          to="/resources"
+          className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold no-underline transition-colors ${
+            location.pathname === '/resources'
+              ? 'bg-emerald-600 text-white'
+              : 'bg-white dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800 hover:bg-gray-100 dark:hover:bg-slate-800'
+          }`}
+        >
+          <span>📚</span>
+          <span>{lang === 'zh' ? '学习资源' : 'Resources'}</span>
+        </Link>
+
+        {/* Topic count footer */}
+        <div className="text-xs text-gray-400 dark:text-slate-600 text-center">
+          {curriculum.flatMap(c => c.topics).length} {lang === 'zh' ? '个主题' : 'topics'}
+          {' · '}
+          {lang === 'zh' ? '持续更新中' : 'continuously updated'}
+        </div>
       </div>
     </aside>
   )

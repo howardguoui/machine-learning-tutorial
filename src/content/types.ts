@@ -1,3 +1,5 @@
+export type Tier = 'junior' | 'mid' | 'senior'
+
 export interface TopicContent {
   id: string
   title: { en: string; zh: string }
@@ -10,5 +12,6 @@ export interface Chapter {
   id: string
   title: { en: string; zh: string }
   icon: string
+  tier?: Tier
   topics: TopicContent[]
 }
