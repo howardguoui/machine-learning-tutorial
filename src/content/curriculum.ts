@@ -45,6 +45,7 @@ import { dataVsModelParallelism, ddpHandsOn, fsdpStrategies, pipelineParallelism
 import { kvCache, torchCompile, flashAttention, quantizationInference, vllmPatterns, latencyProfiling } from './topics/inference-optimization'
 import { whyAlignment, rewardModelTraining, ppoLoop, dpoDirect, rlaif, preferenceDatasets, alignmentEval } from './topics/alignment'
 import { gpuMemoryHierarchy, torchCompileInternals, tritonKernelBasics, flashAttentionKernel, pytorchProfiler, costPerformance } from './topics/gpu-optimization'
+import { openaiTechnical, googleTechnical, bloombergTechnical, bloombergAlgorithmic, universalAIQuestions } from './topics/company-interview'
 
 export const curriculum: Chapter[] = [
   {
@@ -210,6 +211,13 @@ export const curriculum: Chapter[] = [
     icon: '🎯',
     tier: 'senior',
     topics: [whyAlignment, rewardModelTraining, ppoLoop, dpoDirect, rlaif, preferenceDatasets, alignmentEval],
+  },
+  {
+    id: 'company-interview',
+    title: { en: 'Company Interview Prep: OpenAI · Google · Bloomberg', zh: '公司面试准备：OpenAI · Google · Bloomberg' },
+    icon: '🏢',
+    tier: 'senior',
+    topics: [openaiTechnical, googleTechnical, bloombergTechnical, bloombergAlgorithmic, universalAIQuestions],
   },
   {
     id: 'gpu-optimization',
